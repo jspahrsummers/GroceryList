@@ -68,7 +68,7 @@ programming](http://en.wikipedia.org/wiki/Functional_reactive_programming) (FRP)
 
 ## Using the App
 
-GroceryList is primarily an open source project, not an App Store-quality
+GroceryList is primarily a personal project, not an App Store-quality
 download. To actually _use_ it, and share your list with specific people, there
 are a few hoops you'll need to jump through first.
 
