@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D02119D9185C3881008D4589 /* RACSignal+GCYOperatorAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D02119D8185C3881008D4589 /* RACSignal+GCYOperatorAdditions.m */; };
 		D02119FF185C53DA008D4589 /* GCYGroceryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D02119FE185C53DA008D4589 /* GCYGroceryItemViewController.m */; };
-		D0211A03185C5437008D4589 /* GCYEditableItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0211A02185C5437008D4589 /* GCYEditableItemViewModel.m */; };
+		D0211A03185C5437008D4589 /* GCYEditableGroceryItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0211A02185C5437008D4589 /* GCYEditableGroceryItemViewModel.m */; };
 		D03AB07D185D16FB00C8D0C9 /* GCYItemStoreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB07C185D16FB00C8D0C9 /* GCYItemStoreViewModel.m */; };
 		D03AB0A2185D1A1D00C8D0C9 /* GCYItemStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A1185D1A1D00C8D0C9 /* GCYItemStoreCell.m */; };
 		D03AB0A6185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m */; };
@@ -459,8 +459,8 @@
 		D02119D8185C3881008D4589 /* RACSignal+GCYOperatorAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+GCYOperatorAdditions.m"; sourceTree = "<group>"; };
 		D02119FD185C53DA008D4589 /* GCYGroceryItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryItemViewController.h; sourceTree = "<group>"; };
 		D02119FE185C53DA008D4589 /* GCYGroceryItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryItemViewController.m; sourceTree = "<group>"; };
-		D0211A01185C5437008D4589 /* GCYEditableItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYEditableItemViewModel.h; sourceTree = "<group>"; };
-		D0211A02185C5437008D4589 /* GCYEditableItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYEditableItemViewModel.m; sourceTree = "<group>"; };
+		D0211A01185C5437008D4589 /* GCYEditableGroceryItemViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYEditableGroceryItemViewModel.h; sourceTree = "<group>"; };
+		D0211A02185C5437008D4589 /* GCYEditableGroceryItemViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYEditableGroceryItemViewModel.m; sourceTree = "<group>"; };
 		D03AB07B185D16FB00C8D0C9 /* GCYItemStoreViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYItemStoreViewModel.h; sourceTree = "<group>"; };
 		D03AB07C185D16FB00C8D0C9 /* GCYItemStoreViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYItemStoreViewModel.m; sourceTree = "<group>"; };
 		D03AB0A0185D1A1D00C8D0C9 /* GCYItemStoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYItemStoreCell.h; sourceTree = "<group>"; };
@@ -612,8 +612,8 @@
 		D0211A00185C5428008D4589 /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				D0211A01185C5437008D4589 /* GCYEditableItemViewModel.h */,
-				D0211A02185C5437008D4589 /* GCYEditableItemViewModel.m */,
+				D0211A01185C5437008D4589 /* GCYEditableGroceryItemViewModel.h */,
+				D0211A02185C5437008D4589 /* GCYEditableGroceryItemViewModel.m */,
 				D03AB07B185D16FB00C8D0C9 /* GCYItemStoreViewModel.h */,
 				D03AB07C185D16FB00C8D0C9 /* GCYItemStoreViewModel.m */,
 			);
@@ -697,13 +697,13 @@
 			name = List;
 			sourceTree = "<group>";
 		};
-		D0D60EB01839F10900C09998 /* Lists */ = {
+		D0D60EB01839F10900C09998 /* List */ = {
 			isa = PBXGroup;
 			children = (
 				D0A4DC87185545CB0033CFB4 /* GCYGroceryList.h */,
 				D0A4DC88185545CB0033CFB4 /* GCYGroceryList.m */,
 			);
-			name = Lists;
+			name = List;
 			sourceTree = "<group>";
 		};
 		D0D60EB11839F10E00C09998 /* Authentication */ = {
@@ -1011,7 +1011,7 @@
 			isa = PBXGroup;
 			children = (
 				D0D60EB11839F10E00C09998 /* Authentication */,
-				D0D60EB01839F10900C09998 /* Lists */,
+				D0D60EB01839F10900C09998 /* List */,
 				D0D60EB81839F14400C09998 /* Items */,
 				D0A4DC5A1855396A0033CFB4 /* Stores */,
 			);
@@ -1509,7 +1509,7 @@
 				D0A4DC8218553A500033CFB4 /* GCYGroceryStore.m in Sources */,
 				D0F4BE0C18397264004A318B /* GCYUserController.m in Sources */,
 				D0D60F071839FA5400C09998 /* GCYGroceryListViewModel.m in Sources */,
-				D0211A03185C5437008D4589 /* GCYEditableItemViewModel.m in Sources */,
+				D0211A03185C5437008D4589 /* GCYEditableGroceryItemViewModel.m in Sources */,
 				D0CCA42E18585A9D0009499A /* GCYViewModel.m in Sources */,
 				D0F4BF2318397CF4004A318B /* GCYViewController.m in Sources */,
 				D03AB0B0185D1FC600C8D0C9 /* GCYStoreListViewModel.m in Sources */,

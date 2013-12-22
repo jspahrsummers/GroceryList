@@ -1,12 +1,12 @@
 //
-//  GCYEditableItemViewModel.m
+//  GCYEditableGroceryItemViewModel.m
 //  GroceryList
 //
 //  Created by Justin Spahr-Summers on 2013-12-14.
 //  Copyright (c) 2013 Justin Spahr-Summers. All rights reserved.
 //
 
-#import "GCYEditableItemViewModel.h"
+#import "GCYEditableGroceryItemViewModel.h"
 #import "GCYViewModel+Protected.h"
 
 #import "GCYGroceryItem.h"
@@ -16,11 +16,11 @@
 #import "GCYUserController.h"
 #import "RACSignal+GCYOperatorAdditions.h"
 
-static NSString * const GCYEditableItemViewModelErrorDomain = @"GCYEditableItemViewModelErrorDomain";
+static NSString * const GCYEditableGroceryItemViewModelErrorDomain = @"GCYEditableGroceryItemViewModelErrorDomain";
 
-static const NSInteger GCYEditableItemViewModelNoStoresSelectedError = 1;
+static const NSInteger GCYEditableGroceryItemViewModelNoStoresSelectedError = 1;
 
-@implementation GCYEditableItemViewModel
+@implementation GCYEditableGroceryItemViewModel
 
 - (instancetype)initWithList:(GCYGroceryList *)list item:(GCYGroceryItem *)item {
 	self = [super initWithList:list item:item];
@@ -56,7 +56,7 @@ static const NSInteger GCYEditableItemViewModelNoStoresSelectedError = 1;
 		try:^(NSSet *stores, NSError **error) {
 			if (stores.count == 0) {
 				if (error != NULL) {
-					*error = [NSError errorWithDomain:GCYEditableItemViewModelErrorDomain code:GCYEditableItemViewModelNoStoresSelectedError userInfo:@{
+					*error = [NSError errorWithDomain:GCYEditableGroceryItemViewModelErrorDomain code:GCYEditableGroceryItemViewModelNoStoresSelectedError userInfo:@{
 						NSLocalizedDescriptionKey: NSLocalizedString(@"No Stores Selected", nil),
 						NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"Select the grocery stores this item can be found in.", nil),
 					}];

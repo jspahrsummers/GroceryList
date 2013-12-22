@@ -8,7 +8,7 @@
 
 #import "GCYViewModel.h"
 
-@class GCYEditableItemViewModel;
+@class GCYEditableGroceryItemViewModel;
 @class GCYGroceryStoreViewModel;
 
 @interface GCYGroceryListViewModel : GCYViewModel
@@ -40,7 +40,7 @@
 @property (nonatomic, strong, readonly) RACAction *loadItemsAction;
 
 // Any item currently being edited or added.
-@property (nonatomic, strong, readonly) GCYEditableItemViewModel *editingItem;
+@property (nonatomic, strong, readonly) GCYEditableGroceryItemViewModel *editingItem;
 
 // Invoked when the user asks to add an item to the list.
 @property (nonatomic, strong, readonly) RACAction *addItemAction;

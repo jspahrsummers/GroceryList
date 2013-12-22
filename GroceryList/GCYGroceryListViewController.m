@@ -123,7 +123,7 @@
 	
 	[[[[[[RACObserve(self.viewModel, editingItem)
 		ignore:nil]
-		map:^(GCYEditableItemViewModel *viewModel) {
+		map:^(GCYEditableGroceryItemViewModel *viewModel) {
 			return [[GCYGroceryItemViewController alloc] initWithViewModel:viewModel];
 		}]
 		map:^(GCYGroceryItemViewController *viewController) {

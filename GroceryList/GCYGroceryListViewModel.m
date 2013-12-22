@@ -9,7 +9,7 @@
 #import "GCYGroceryListViewModel.h"
 #import "GCYViewModel+Protected.h"
 
-#import "GCYEditableItemViewModel.h"
+#import "GCYEditableGroceryItemViewModel.h"
 #import "GCYGroceryItem.h"
 #import "GCYGroceryItemViewModel.h"
 #import "GCYGroceryList.h"
@@ -169,7 +169,7 @@
 	RACAggregatingSignalGenerator *editItemGenerator = [[RACDynamicSignalGenerator
 		generatorWithBlock:^(GCYGroceryItem *item) {
 			return [waitForList map:^(GCYGroceryList *list) {
-				return [[GCYEditableItemViewModel alloc] initWithList:list item:item];
+				return [[GCYEditableGroceryItemViewModel alloc] initWithList:list item:item];
 			}];
 		}]
 		aggregate];

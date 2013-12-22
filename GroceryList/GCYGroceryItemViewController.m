@@ -26,7 +26,7 @@
 
 #pragma mark Lifecycle
 
-- (id)initWithViewModel:(GCYEditableItemViewModel *)viewModel {
+- (id)initWithViewModel:(GCYEditableGroceryItemViewModel *)viewModel {
 	self = [super initWithViewModel:viewModel];
 	if (self == nil) return nil;
 

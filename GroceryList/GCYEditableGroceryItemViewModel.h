@@ -1,5 +1,5 @@
 //
-//  GCYEditableItemViewModel.h
+//  GCYEditableGroceryItemViewModel.h
 //  GroceryList
 //
 //  Created by Justin Spahr-Summers on 2013-12-14.
@@ -8,7 +8,7 @@
 
 #import "GCYGroceryItemViewModel.h"
 
-@interface GCYEditableItemViewModel : GCYGroceryItemViewModel
+@interface GCYEditableGroceryItemViewModel : GCYGroceryItemViewModel
 
 // The new name for the item.
 @property (nonatomic, copy) NSString *editedName;

@@ -7,12 +7,12 @@
 //
 
 #import "GCYTableViewController.h"
-#import "GCYEditableItemViewModel.h"
+#import "GCYEditableGroceryItemViewModel.h"
 
 // Allows the user to add or edit an item.
 @interface GCYGroceryItemViewController : GCYTableViewController
 
-@property (nonatomic, strong, readonly) GCYEditableItemViewModel *viewModel;
+@property (nonatomic, strong, readonly) GCYEditableGroceryItemViewModel *viewModel;
 
 // Sends YES when the user successfully saves their changes, or NO when the user
 // cancels editing.
