@@ -72,6 +72,10 @@ GroceryList is primarily an open source project, not an App Store-quality
 download. To actually _use_ it, and share your list with specific people, there
 are a few hoops you'll need to jump through first.
 
+Before anything else, make sure to run `script/bootstrap` in your local copy of
+the repository. This will automatically clone all submodules used in the
+project.
+
 ### Starting the List
 
 Since the app is [built on GitHub](#synchronization), it requires a GitHub
@@ -103,9 +107,9 @@ After registration, you'll have to add the client ID and secret to the project's
 
 ### Required Build Settings
 
-Because the author is lazy, the project won't build until effectively hardcoded
+Because the author is lazy, the project won't build until (effectively) hardcoded
 with certain settings. This is accomplished with a custom Xcode configuration
-file (specifically ignored from commits).
+file that is [specifically ignored](Configuration/.gitignore) by Git.
 
 In your local clone of the repository, inside the `Configuration` folder, create
 a file named `UserSettings.xcconfig`. In it, add a line like the following:
