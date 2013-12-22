@@ -1,0 +1,5 @@
+// Base all settings on the iOS-Application configuration.
+#include "../External/OctoKit/External/Mantle/Configuration/iOS/iOS-Application.xcconfig"
+
+// Include any settings not committed to the repository.
+#include "UserSettings.xcconfig"
