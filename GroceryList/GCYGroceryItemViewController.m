@@ -10,7 +10,7 @@
 
 #import "GCYGroceryItem.h"
 #import "GCYItemStoreCell.h"
-#import "GCYItemStoreViewModel.h"
+#import "GCYGroceryItemStoreViewModel.h"
 
 @interface GCYGroceryItemViewController () <UISearchBarDelegate>
 
@@ -103,7 +103,7 @@
 #pragma mark UITableViewDelegate
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	GCYItemStoreViewModel *store = self.viewModel.stores[indexPath.row];
+	GCYGroceryItemStoreViewModel *store = self.viewModel.stores[indexPath.row];
 	store.selected = !store.selected;
 
 	return nil;

@@ -12,7 +12,7 @@
 #import "GCYGroceryItem.h"
 #import "GCYGroceryList.h"
 #import "GCYGroceryStore.h"
-#import "GCYItemStoreViewModel.h"
+#import "GCYGroceryItemStoreViewModel.h"
 #import "GCYUserController.h"
 #import "RACSignal+GCYOperatorAdditions.h"
 
@@ -30,12 +30,12 @@ static const NSInteger GCYEditableGroceryItemViewModelNoStoresSelectedError = 1;
 	
 	RAC(self, stores) = [[[[list.stores.rac_signal
 		map:^(GCYGroceryStore *store) {
-			return [[GCYItemStoreViewModel alloc] initWithStore:store];
+			return [[GCYGroceryItemStoreViewModel alloc] initWithStore:store];
 		}]
 		collect]
 		map:^(NSArray *stores) {
 			// FIXME: This doesn't belong here.
-			return [stores sortedArrayUsingComparator:^(GCYItemStoreViewModel *storeA, GCYItemStoreViewModel *storeB) {
+			return [stores sortedArrayUsingComparator:^(GCYGroceryItemStoreViewModel *storeA, GCYGroceryItemStoreViewModel *storeB) {
 				return [storeA.store.name localizedCaseInsensitiveCompare:storeB.store.name];
 			}];
 		}]
@@ -46,10 +46,10 @@ static const NSInteger GCYEditableGroceryItemViewModelNoStoresSelectedError = 1;
 		flattenMap:^(NSArray *stores) {
 			return stores.rac_signal;
 		}]
-		filter:^(GCYItemStoreViewModel *store) {
+		filter:^(GCYGroceryItemStoreViewModel *store) {
 			return store.selected;
 		}]
-		map:^(GCYItemStoreViewModel *viewModel) {
+		map:^(GCYGroceryItemStoreViewModel *viewModel) {
 			return viewModel.store;
 		}]
 		gcy_collectSet]

@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Justin Spahr-Summers. All rights reserved.
 //
 
-@class GCYItemStoreViewModel;
+@class GCYGroceryItemStoreViewModel;
 
 @interface GCYItemStoreCell : UITableViewCell
 
-@property (nonatomic, strong) GCYItemStoreViewModel *viewModel;
+@property (nonatomic, strong) GCYGroceryItemStoreViewModel *viewModel;
 
 @end

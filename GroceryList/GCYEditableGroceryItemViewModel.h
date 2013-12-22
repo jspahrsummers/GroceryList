@@ -13,7 +13,7 @@
 // The new name for the item.
 @property (nonatomic, copy) NSString *editedName;
 
-// The `GCYItemStoreViewModel`s that the user should be able to select from for
+// The `GCYGroceryItemStoreViewModel`s that the user should be able to select from for
 // this item, in the order that they should be presented.
 @property (nonatomic, copy, readonly) NSArray *stores;
 

@@ -1,14 +1,14 @@
 //
-//  GCYItemStoreViewModel.m
+//  GCYGroceryItemStoreViewModel.m
 //  GroceryList
 //
 //  Created by Justin Spahr-Summers on 2013-12-14.
 //  Copyright (c) 2013 Justin Spahr-Summers. All rights reserved.
 //
 
-#import "GCYItemStoreViewModel.h"
+#import "GCYGroceryItemStoreViewModel.h"
 
-@implementation GCYItemStoreViewModel
+@implementation GCYGroceryItemStoreViewModel
 
 #pragma mark Lifecycle
 

@@ -1,5 +1,5 @@
 //
-//  GCYItemStoreViewModel.h
+//  GCYGroceryItemStoreViewModel.h
 //  GroceryList
 //
 //  Created by Justin Spahr-Summers on 2013-12-14.
@@ -11,7 +11,7 @@
 @class GCYGroceryStore;
 
 // Allows the user to select a store that the item may or may not be bought at.
-@interface GCYItemStoreViewModel : GCYViewModel
+@interface GCYGroceryItemStoreViewModel : GCYViewModel
 
 @property (nonatomic, strong, readonly) GCYGroceryStore *store;
 

@@ -9,7 +9,7 @@
 #import "GCYItemStoreCell.h"
 
 #import "GCYGroceryStore.h"
-#import "GCYItemStoreViewModel.h"
+#import "GCYGroceryItemStoreViewModel.h"
 
 @implementation GCYItemStoreCell
 
