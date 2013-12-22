@@ -9,7 +9,7 @@
 #import "GCYGroceryItemViewController.h"
 
 #import "GCYGroceryItem.h"
-#import "GCYItemStoreCell.h"
+#import "GCYGroceryItemStoreCell.h"
 #import "GCYGroceryItemStoreViewModel.h"
 
 @interface GCYGroceryItemViewController () <UISearchBarDelegate>
@@ -58,7 +58,7 @@
     [super viewDidLoad];
 
 	self.view.backgroundColor = UIColor.whiteColor;
-	[self.tableView registerClass:GCYItemStoreCell.class forCellReuseIdentifier:NSStringFromClass(GCYItemStoreCell.class)];
+	[self.tableView registerClass:GCYGroceryItemStoreCell.class forCellReuseIdentifier:NSStringFromClass(GCYGroceryItemStoreCell.class)];
 
 	self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
 	self.searchBar.placeholder = NSLocalizedString(@"Item name", nil);
@@ -95,7 +95,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	GCYItemStoreCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(GCYItemStoreCell.class) forIndexPath:indexPath];
+	GCYGroceryItemStoreCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(GCYGroceryItemStoreCell.class) forIndexPath:indexPath];
 	cell.viewModel = self.viewModel.stores[indexPath.row];
 	return cell;
 }

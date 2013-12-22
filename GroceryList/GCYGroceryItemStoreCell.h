@@ -1,5 +1,5 @@
 //
-//  GCYItemStoreCell.h
+//  GCYGroceryItemStoreCell.h
 //  GroceryList
 //
 //  Created by Justin Spahr-Summers on 2013-12-14.
@@ -8,7 +8,7 @@
 
 @class GCYGroceryItemStoreViewModel;
 
-@interface GCYItemStoreCell : UITableViewCell
+@interface GCYGroceryItemStoreCell : UITableViewCell
 
 @property (nonatomic, strong) GCYGroceryItemStoreViewModel *viewModel;
 
