@@ -1,4 +1,5 @@
-**Copyright (c) 2013 Justin Spahr-Summers**
+**Project and source code copyright (c) 2013 Justin Spahr-Summers**
+**Icon copyright (c) 2013 Brenda McIntosh.**
 **All rights reserved.**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
