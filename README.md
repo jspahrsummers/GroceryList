@@ -12,6 +12,8 @@ or worth any kind of payment.
 If you're only interested in _using_ the app, you can jump straight to [getting
 it built](#using-the-app).
 
+![App icon](https://f.cloud.github.com/assets/432536/1798581/b31b7ca6-6b59-11e3-9d6e-42899d81f163.png)
+
 ## Synchronization
 
 The app stores and synchronizes its grocery list using [a GitHub
