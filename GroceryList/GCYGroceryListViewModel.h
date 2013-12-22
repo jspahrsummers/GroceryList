@@ -25,7 +25,7 @@
 
 // Invoked when the user asks to switch lists.
 //
-// Sends a `GCYStoreListViewModel` upon success.
+// Sends a `GCYGroceryStoreListViewModel` upon success.
 @property (nonatomic, strong, readonly) RACAction *switchListsAction;
 
 // Asks the user to sign in, or automatically signs in if possible.
