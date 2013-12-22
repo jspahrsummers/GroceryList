@@ -1,0 +1,12 @@
+[submodule "External/OctoKit"]
+	path = External/OctoKit
+	url = https://github.com/octokit/octokit.objc.git
+[submodule "External/ReactiveCocoaLayout"]
+	path = External/ReactiveCocoaLayout
+	url = https://github.com/ReactiveCocoa/ReactiveCocoaLayout.git
+[submodule "External/ReactiveViewModel"]
+	path = External/ReactiveViewModel
+	url = https://github.com/ReactiveCocoa/ReactiveViewModel.git
+[submodule "External/HockeySDK-iOS"]
+	path = External/HockeySDK-iOS
+	url = https://github.com/bitstadium/HockeySDK-iOS.git

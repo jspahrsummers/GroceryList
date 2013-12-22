@@ -1,0 +1,23 @@
+//
+//  GroceryListTests.pch
+//  GroceryList
+//
+//  Created by Justin Spahr-Summers on 2013-11-17.
+//  Copyright (c) 2013 Justin Spahr-Summers. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+
+#import <Archimedes/Archimedes.h>
+#import <Mantle/Mantle.h>
+#import <OctoKit/OctoKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <ReactiveCocoaLayout/ReactiveCocoaLayout.h>
+#import <ReactiveViewModel/ReactiveViewModel.h>
+
+#define EXP_SHORTHAND
+#import "Expecta.h"
+#import "Specta.h"
