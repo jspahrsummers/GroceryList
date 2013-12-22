@@ -7,11 +7,11 @@
 //
 
 #import "GCYTableViewController.h"
-#import "GCYStoreListViewModel.h"
+#import "GCYGroceryStoreListViewModel.h"
 
 @interface GCYGroceryStoresViewController : GCYTableViewController
 
-@property (nonatomic, strong, readonly) GCYStoreListViewModel *viewModel;
+@property (nonatomic, strong, readonly) GCYGroceryStoreListViewModel *viewModel;
 
 // Sends a `GCYGroceryStoreViewModel` when the user selects one to switch to, or
 // nil if the user dismissed the list without selecting a store.

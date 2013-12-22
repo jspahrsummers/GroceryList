@@ -19,7 +19,7 @@
 
 #pragma mark Lifecycle
 
-- (instancetype)initWithViewModel:(GCYStoreListViewModel *)viewModel {
+- (instancetype)initWithViewModel:(GCYGroceryStoreListViewModel *)viewModel {
 	self = [super initWithViewModel:viewModel];
 	if (self == nil) return nil;
 

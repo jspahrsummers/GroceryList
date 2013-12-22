@@ -14,7 +14,7 @@
 #import "GCYGroceryItemViewModel.h"
 #import "GCYGroceryList.h"
 #import "GCYGroceryStoreViewModel.h"
-#import "GCYStoreListViewModel.h"
+#import "GCYGroceryStoreListViewModel.h"
 #import "GCYUserController.h"
 #import "RACSignal+GCYOperatorAdditions.h"
 
@@ -162,7 +162,7 @@
 	
 	_switchListsAction = [[waitForList
 		map:^(GCYGroceryList *list) {
-			return [[GCYStoreListViewModel alloc] initWithGroceryList:list];
+			return [[GCYGroceryStoreListViewModel alloc] initWithGroceryList:list];
 		}]
 		action];
 	

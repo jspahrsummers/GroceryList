@@ -14,7 +14,7 @@
 		D03AB0A2185D1A1D00C8D0C9 /* GCYItemStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A1185D1A1D00C8D0C9 /* GCYItemStoreCell.m */; };
 		D03AB0A6185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m */; };
 		D03AB0AA185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A9185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.m */; };
-		D03AB0B0185D1FC600C8D0C9 /* GCYStoreListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0AF185D1FC600C8D0C9 /* GCYStoreListViewModel.m */; };
+		D03AB0B0185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0AF185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.m */; };
 		D03AB0F5185D237400C8D0C9 /* GCYGroceryStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0F4185D237400C8D0C9 /* GCYGroceryStoreCell.m */; };
 		D03AB160185D2B3600C8D0C9 /* groceryicon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = D03AB13D185D2B1500C8D0C9 /* groceryicon-120.png */; };
 		D053AB831861133D0084CF19 /* groceryicon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = D053AB811861133D0084CF19 /* groceryicon-58.png */; };
@@ -469,8 +469,8 @@
 		D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryStoresViewController.m; sourceTree = "<group>"; };
 		D03AB0A8185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryStoreViewModel.h; sourceTree = "<group>"; };
 		D03AB0A9185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryStoreViewModel.m; sourceTree = "<group>"; };
-		D03AB0AE185D1FC600C8D0C9 /* GCYStoreListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYStoreListViewModel.h; sourceTree = "<group>"; };
-		D03AB0AF185D1FC600C8D0C9 /* GCYStoreListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYStoreListViewModel.m; sourceTree = "<group>"; };
+		D03AB0AE185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryStoreListViewModel.h; sourceTree = "<group>"; };
+		D03AB0AF185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryStoreListViewModel.m; sourceTree = "<group>"; };
 		D03AB0F3185D237400C8D0C9 /* GCYGroceryStoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryStoreCell.h; sourceTree = "<group>"; };
 		D03AB0F4185D237400C8D0C9 /* GCYGroceryStoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryStoreCell.m; sourceTree = "<group>"; };
 		D03AB13D185D2B1500C8D0C9 /* groceryicon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groceryicon-120.png"; sourceTree = "<group>"; };
@@ -634,8 +634,8 @@
 		D03AB0A7185D1F5700C8D0C9 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				D03AB0AE185D1FC600C8D0C9 /* GCYStoreListViewModel.h */,
-				D03AB0AF185D1FC600C8D0C9 /* GCYStoreListViewModel.m */,
+				D03AB0AE185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.h */,
+				D03AB0AF185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.m */,
 				D03AB0A8185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.h */,
 				D03AB0A9185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.m */,
 			);
@@ -1512,7 +1512,7 @@
 				D0211A03185C5437008D4589 /* GCYEditableGroceryItemViewModel.m in Sources */,
 				D0CCA42E18585A9D0009499A /* GCYViewModel.m in Sources */,
 				D0F4BF2318397CF4004A318B /* GCYViewController.m in Sources */,
-				D03AB0B0185D1FC600C8D0C9 /* GCYStoreListViewModel.m in Sources */,
+				D03AB0B0185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.m in Sources */,
 				D03AB07D185D16FB00C8D0C9 /* GCYGroceryItemStoreViewModel.m in Sources */,
 				D0D60F2F1839FEDB00C09998 /* GCYGroceryListViewController.m in Sources */,
 				D02119FF185C53DA008D4589 /* GCYGroceryItemViewController.m in Sources */,

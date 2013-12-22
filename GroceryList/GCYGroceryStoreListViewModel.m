@@ -1,18 +1,18 @@
 //
-//  GCYStoreListViewModel.m
+//  GCYGroceryStoreListViewModel.m
 //  GroceryList
 //
 //  Created by Justin Spahr-Summers on 2013-12-14.
 //  Copyright (c) 2013 Justin Spahr-Summers. All rights reserved.
 //
 
-#import "GCYStoreListViewModel.h"
+#import "GCYGroceryStoreListViewModel.h"
 
 #import "GCYGroceryList.h"
 #import "GCYGroceryStore.h"
 #import "GCYGroceryStoreViewModel.h"
 
-@implementation GCYStoreListViewModel
+@implementation GCYGroceryStoreListViewModel
 
 - (instancetype)initWithGroceryList:(GCYGroceryList *)list {
 	self = [super init];

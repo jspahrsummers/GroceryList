@@ -93,7 +93,7 @@
 				deferred:nil]
 				catchTo:[RACSignal empty]];
 		}]
-		map:^(GCYStoreListViewModel *viewModel) {
+		map:^(GCYGroceryStoreListViewModel *viewModel) {
 			return [[GCYGroceryStoresViewController alloc] initWithViewModel:viewModel];
 		}]
 		map:^(GCYGroceryStoresViewController *viewController) {
