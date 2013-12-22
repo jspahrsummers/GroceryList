@@ -12,7 +12,7 @@
 		D0211A03185C5437008D4589 /* GCYEditableGroceryItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0211A02185C5437008D4589 /* GCYEditableGroceryItemViewModel.m */; };
 		D03AB07D185D16FB00C8D0C9 /* GCYGroceryItemStoreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB07C185D16FB00C8D0C9 /* GCYGroceryItemStoreViewModel.m */; };
 		D03AB0A2185D1A1D00C8D0C9 /* GCYItemStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A1185D1A1D00C8D0C9 /* GCYItemStoreCell.m */; };
-		D03AB0A6185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m */; };
+		D03AB0A6185D1F1800C8D0C9 /* GCYGroceryStoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoreListViewController.m */; };
 		D03AB0AA185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0A9185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.m */; };
 		D03AB0B0185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0AF185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.m */; };
 		D03AB0F5185D237400C8D0C9 /* GCYGroceryStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D03AB0F4185D237400C8D0C9 /* GCYGroceryStoreCell.m */; };
@@ -465,8 +465,8 @@
 		D03AB07C185D16FB00C8D0C9 /* GCYGroceryItemStoreViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryItemStoreViewModel.m; sourceTree = "<group>"; };
 		D03AB0A0185D1A1D00C8D0C9 /* GCYItemStoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYItemStoreCell.h; sourceTree = "<group>"; };
 		D03AB0A1185D1A1D00C8D0C9 /* GCYItemStoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYItemStoreCell.m; sourceTree = "<group>"; };
-		D03AB0A4185D1F1800C8D0C9 /* GCYGroceryStoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryStoresViewController.h; sourceTree = "<group>"; };
-		D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryStoresViewController.m; sourceTree = "<group>"; };
+		D03AB0A4185D1F1800C8D0C9 /* GCYGroceryStoreListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryStoreListViewController.h; sourceTree = "<group>"; };
+		D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryStoreListViewController.m; sourceTree = "<group>"; };
 		D03AB0A8185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryStoreViewModel.h; sourceTree = "<group>"; };
 		D03AB0A9185D1F6600C8D0C9 /* GCYGroceryStoreViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryStoreViewModel.m; sourceTree = "<group>"; };
 		D03AB0AE185D1FC600C8D0C9 /* GCYGroceryStoreListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryStoreListViewModel.h; sourceTree = "<group>"; };
@@ -623,8 +623,8 @@
 		D03AB0A3185D1F0700C8D0C9 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
-				D03AB0A4185D1F1800C8D0C9 /* GCYGroceryStoresViewController.h */,
-				D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m */,
+				D03AB0A4185D1F1800C8D0C9 /* GCYGroceryStoreListViewController.h */,
+				D03AB0A5185D1F1800C8D0C9 /* GCYGroceryStoreListViewController.m */,
 				D03AB0F3185D237400C8D0C9 /* GCYGroceryStoreCell.h */,
 				D03AB0F4185D237400C8D0C9 /* GCYGroceryStoreCell.m */,
 			);
@@ -1503,7 +1503,7 @@
 				D0F0B54C171507240048B8DE /* main.m in Sources */,
 				D08161E5185EDD2000925E34 /* RACSignal+GCYBackgroundTaskAdditions.m in Sources */,
 				D0D60E851839EC3600C09998 /* GCYTableViewController.m in Sources */,
-				D03AB0A6185D1F1800C8D0C9 /* GCYGroceryStoresViewController.m in Sources */,
+				D03AB0A6185D1F1800C8D0C9 /* GCYGroceryStoreListViewController.m in Sources */,
 				D0F0B550171507240048B8DE /* GCYAppDelegate.m in Sources */,
 				D0A4DC89185545CB0033CFB4 /* GCYGroceryList.m in Sources */,
 				D0A4DC8218553A500033CFB4 /* GCYGroceryStore.m in Sources */,

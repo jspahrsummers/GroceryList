@@ -14,7 +14,7 @@
 #import "GCYGroceryItemViewModel.h"
 #import "GCYGroceryStore.h"
 #import "GCYGroceryStoreViewModel.h"
-#import "GCYGroceryStoresViewController.h"
+#import "GCYGroceryStoreListViewController.h"
 
 #import <ReactiveCocoa/UIRefreshControl+RACSupport.h>
 
@@ -94,9 +94,9 @@
 				catchTo:[RACSignal empty]];
 		}]
 		map:^(GCYGroceryStoreListViewModel *viewModel) {
-			return [[GCYGroceryStoresViewController alloc] initWithViewModel:viewModel];
+			return [[GCYGroceryStoreListViewController alloc] initWithViewModel:viewModel];
 		}]
-		map:^(GCYGroceryStoresViewController *viewController) {
+		map:^(GCYGroceryStoreListViewController *viewController) {
 			@strongify(self);
 			UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
 

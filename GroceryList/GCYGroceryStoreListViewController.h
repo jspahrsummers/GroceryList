@@ -1,5 +1,5 @@
 //
-//  GCYGroceryStoresViewController.h
+//  GCYGroceryStoreListViewController.h
 //  GroceryList
 //
 //  Created by Justin Spahr-Summers on 2013-12-14.
@@ -9,7 +9,7 @@
 #import "GCYTableViewController.h"
 #import "GCYGroceryStoreListViewModel.h"
 
-@interface GCYGroceryStoresViewController : GCYTableViewController
+@interface GCYGroceryStoreListViewController : GCYTableViewController
 
 @property (nonatomic, strong, readonly) GCYGroceryStoreListViewModel *viewModel;
 

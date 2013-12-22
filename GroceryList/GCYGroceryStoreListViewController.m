@@ -1,17 +1,17 @@
 //
-//  GCYGroceryStoresViewController.m
+//  GCYGroceryStoreListViewController.m
 //  GroceryList
 //
 //  Created by Justin Spahr-Summers on 2013-12-14.
 //  Copyright (c) 2013 Justin Spahr-Summers. All rights reserved.
 //
 
-#import "GCYGroceryStoresViewController.h"
+#import "GCYGroceryStoreListViewController.h"
 
 #import "GCYGroceryStoreCell.h"
 #import "GCYGroceryStoreViewModel.h"
 
-@implementation GCYGroceryStoresViewController
+@implementation GCYGroceryStoreListViewController
 
 #pragma mark Properties
 
