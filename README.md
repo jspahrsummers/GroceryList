@@ -14,6 +14,8 @@ it built](#using-the-app).
 
 ![App icon](https://f.cloud.github.com/assets/432536/1798581/b31b7ca6-6b59-11e3-9d6e-42899d81f163.png)
 
+_(Icon created by [@brender](https://github.com/brender).)_
+
 ## Synchronization
 
 The app stores and synchronizes its grocery list using [a GitHub
