@@ -1,4 +1,7 @@
 language: objective-c
+
+before_script: echo 'GCC_PREPROCESSOR_DEFINITIONS=$(inherited) GCY_LIST_REPOSITORY=jspahrsummers/grocery-lists GCY_CLIENT_ID=notarealclientid GCY_CLIENT_SECRET=notarealclientsecret' > Configuration/UserSettings.xcconfig
 script: script/cibuild
+
 notifications:
   email: false
