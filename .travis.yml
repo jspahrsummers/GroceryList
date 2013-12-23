@@ -1,0 +1,3 @@
+language: objective-c
+install: script/bootstrap
+script: script/cibuild
