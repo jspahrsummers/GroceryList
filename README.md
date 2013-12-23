@@ -1,4 +1,4 @@
-# GroceryList
+# GroceryList [![Build Status](https://travis-ci.org/jspahrsummers/GroceryList.png?branch=master)](https://travis-ci.org/jspahrsummers/GroceryList)
 
 GroceryList is a simple iPhone application built to serve two basic needs:
 
