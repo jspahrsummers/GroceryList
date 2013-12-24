@@ -24,7 +24,7 @@
 
 	_childTableViewController = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
 	[self addChildViewController:self.childTableViewController];
-
+	[self.childTableViewController didMoveToParentViewController:self];
 	return self;
 }
 
