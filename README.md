@@ -137,7 +137,7 @@ of the app is to build it directly to the device of anyone interested in sharing
 your grocery list.
 
 However, it may be easier over the long term to use a (totally optional) service
-like [HockeyApp](hockeyapp.net) or [TestFlight](http://testflightapp.com/) for
+like [HockeyApp](http://hockeyapp.net) or [TestFlight](http://testflightapp.com/) for
 distributing builds.
 
 ## License
