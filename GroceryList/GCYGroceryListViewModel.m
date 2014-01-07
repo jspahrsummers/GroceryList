@@ -63,45 +63,32 @@
 			return [client fetchRepositoryWithName:pieces[1] owner:pieces[0]];
 		}]
 		switchToLatest];
-
-	RACAggregatingSignalGenerator *loadListGenerator = [[[[[RACObserve(self, repository)
+	
+	RAC(self, list) = [[[RACObserve(self, repository)
 		ignore:nil]
-		take:1]
-		flattenMap:^(OCTRepository *repository) {
+		map:^(OCTRepository *repository) {
 			return [GCYUserController.sharedUserController.client gcy_groceryListWithRepository:repository];
 		}]
-		gcy_signalGenerator]
-		aggregate];
-	
-	RAC(self, list) = [[loadListGenerator.generatedSignals
-		map:^(RACSignal *signal) {
-			return [signal catchTo:[RACSignal empty]];
-		}]
 		switchToLatest];
-
-	RACAggregatingSignalGenerator *loadItemsGenerator = [[loadListGenerator
-		postcompose:[RACDynamicSignalGenerator
-			generatorWithBlock:^(GCYGroceryList *list) {
-				return [[[list.items.rac_signal
-					map:^(GCYGroceryItem *item) {
-						return [[GCYGroceryItemViewModel alloc] initWithList:list item:item];
-					}]
-					collect]
-					map:^(NSArray *items) {
-						// FIXME: This doesn't belong here.
-						return [items sortedArrayUsingComparator:^(GCYGroceryItemViewModel *itemA, GCYGroceryItemViewModel *itemB) {
-							return [itemA.item.name localizedCaseInsensitiveCompare:itemB.item.name];
-						}];
-					}];
-			}]]
-		aggregate];
 	
-	RAC(self, allItems) = [[[loadItemsGenerator.generatedSignals
-		map:^(RACSignal *signal) {
-			return [signal catchTo:[RACSignal empty]];
+	_loadItemsAction = [[[[[[RACObserve(self, list)
+		ignore:nil]
+		take:1]
+		flattenMap:^(GCYGroceryList *list) {
+			return [list.items.rac_signal map:^(GCYGroceryItem *item) {
+				return [[GCYGroceryItemViewModel alloc] initWithList:list item:item];
+			}];
 		}]
-		switchToLatest]
-		startWith:@[]];
+		collect]
+		map:^(NSArray *items) {
+			// FIXME: This doesn't belong here.
+			return [items sortedArrayUsingComparator:^(GCYGroceryItemViewModel *itemA, GCYGroceryItemViewModel *itemB) {
+				return [itemA.item.name localizedCaseInsensitiveCompare:itemB.item.name];
+			}];
+		}]
+		action];
+	
+	RAC(self, allItems) = [self.loadItemsAction.results startWith:@[]];
 	
 	// TODO: Should this be an action?
 	[[[[[[RACObserve(self, allItems)
@@ -154,8 +141,6 @@
 		}]
 		switchToLatest];
 
-	_loadItemsAction = [loadItemsGenerator action];
-
 	RACSignal *waitForList = [[RACObserve(self, list)
 		ignore:nil]
 		take:1];
@@ -166,22 +151,23 @@
 		}]
 		action];
 	
-	RACAggregatingSignalGenerator *editItemGenerator = [[RACDynamicSignalGenerator
-		generatorWithBlock:^(GCYGroceryItem *item) {
-			return [waitForList map:^(GCYGroceryList *list) {
-				return [[GCYEditableGroceryItemViewModel alloc] initWithList:list item:item];
-			}];
-		}]
-		aggregate];
+	RACAction *editItemAction = [[RACSamplingSignalGenerator
+		generatorBySampling:[RACObserve(self, list) ignore:nil]
+		forGenerator:[RACDynamicSignalGenerator generatorWithBlock:^(RACTuple *xs) {
+			GCYGroceryItem *item = xs[0];
+			GCYGroceryList *list = xs[1];
+
+			id viewModel = [[GCYEditableGroceryItemViewModel alloc] initWithList:list item:item];
+			return [RACSignal return:viewModel];
+		}]]
+		action];
 	
-	RAC(self, editingItem) = [[editItemGenerator.generatedSignals
-		concat]
-		deliverOn:RACScheduler.mainThreadScheduler];
+	RAC(self, editingItem) = editItemAction.results;
 	
 	_addItemAction = [[[[RACSignal
 		return:nil]
 		gcy_signalGenerator]
-		postcompose:editItemGenerator]
+		postcompose:editItemAction]
 		action];
 
 	_removeItemAction = [[RACDynamicSignalGenerator
@@ -191,7 +177,7 @@
 				flattenMap:^(GCYGroceryList *list) {
 					return [GCYUserController.sharedUserController.client gcy_removeItem:item inGroceryList:list];
 				}]
-				concat:[self.loadItemsAction deferred:nil]];
+				concat:[self.loadItemsAction signalWithValue:nil]];
 		}]
 		action];
 	
@@ -229,7 +215,7 @@
 			return [GCYUserController.sharedUserController.client gcy_removeItem:item inGroceryList:self.list];
 		}]
 		concat]
-		concat:[self.loadItemsAction deferred:nil]]
+		concat:[self.loadItemsAction signalWithValue:nil]]
 		actionEnabledIf:anyItemsCrossedOff];
 	
 	[[RACSignal
@@ -245,14 +231,14 @@
 	[[[[self.didBecomeActiveSignal
 		flattenMap:^(GCYGroceryListViewModel *viewModel) {
 			return [[[[viewModel.signInAction
-				deferred:nil]
+				signalWithValue:nil]
 				ignoreValues]
 				concat:[RACSignal return:viewModel]]
 				catchTo:[RACSignal empty]];
 		}]
 		flattenMap:^(GCYGroceryListViewModel *viewModel) {
 			return [[[viewModel.loadItemsAction
-				deferred:nil]
+				signalWithValue:nil]
 				concat:[RACSignal return:RACUnit.defaultUnit]]
 				catchTo:[RACSignal empty]];
 		}]

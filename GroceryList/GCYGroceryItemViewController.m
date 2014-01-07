@@ -40,7 +40,7 @@
 		mapReplace:self.viewModel.saveItemAction]
 		flattenMap:^(RACAction *action) {
 			return [[[action
-				deferred:nil]
+				signalWithValue:nil]
 				ignoreValues]
 				concat:[RACSignal return:@YES]];
 		}]

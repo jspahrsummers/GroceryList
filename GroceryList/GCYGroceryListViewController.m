@@ -90,7 +90,7 @@
 		mapReplace:self.viewModel.switchListsAction]
 		flattenMap:^(RACAction *action) {
 			return [[action
-				deferred:nil]
+				signalWithValue:nil]
 				catchTo:[RACSignal empty]];
 		}]
 		map:^(GCYGroceryStoreListViewModel *viewModel) {
