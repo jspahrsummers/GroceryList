@@ -14,6 +14,8 @@ it built](#using-the-app).
 
 ![App icon](https://f.cloud.github.com/assets/432536/1798581/b31b7ca6-6b59-11e3-9d6e-42899d81f163.png)
 
+_(Icon created by [@brender](https://github.com/brender).)_
+
 ## Synchronization
 
 The app stores and synchronizes its grocery list using [a GitHub
@@ -135,7 +137,7 @@ of the app is to build it directly to the device of anyone interested in sharing
 your grocery list.
 
 However, it may be easier over the long term to use a (totally optional) service
-like [HockeyApp](hockeyapp.net) or [TestFlight](http://testflightapp.com/) for
+like [HockeyApp](http://hockeyapp.net) or [TestFlight](http://testflightapp.com/) for
 distributing builds.
 
 ## License
