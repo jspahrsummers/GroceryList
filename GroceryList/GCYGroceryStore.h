@@ -13,6 +13,8 @@
 @property (nonatomic, copy, readonly) NSString *name;
 
 // Instantiates a `GCYGroceryStore` based on a tree entry in a repository.
+//
+// TODO: Put this into a category on OCTTreeEntry instead.
 + (RACSignal *)groceryStoreWithTreeEntry:(OCTTreeEntry *)entry;
 
 // Builds a tree entry with a grocery store and a SHA that points to the desired

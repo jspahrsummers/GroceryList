@@ -30,6 +30,7 @@
 		D0D60F2C1839FC7A00C09998 /* GCYGroceryItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D60F2B1839FC7A00C09998 /* GCYGroceryItemViewModel.m */; };
 		D0D60F2F1839FEDB00C09998 /* GCYGroceryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D60F2E1839FEDB00C09998 /* GCYGroceryListViewController.m */; };
 		D0D60F35183A09E500C09998 /* GCYGroceryItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D60F34183A09E500C09998 /* GCYGroceryItemCell.m */; };
+		D0E35A6F1867CC1C00B3E6B9 /* GCYGroceryStoreSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E35A6E1867CC1C00B3E6B9 /* GCYGroceryStoreSpec.m */; };
 		D0EE249E1839AAC800F251AF /* libHockeySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE24971839AAB300F251AF /* libHockeySDK.a */; };
 		D0EE24A01839AAD300F251AF /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE249F1839AAD300F251AF /* CrashReporter.framework */; };
 		D0EE24A21839AADB00F251AF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EE24A11839AADB00F251AF /* CoreText.framework */; };
@@ -500,6 +501,7 @@
 		D0D60F2E1839FEDB00C09998 /* GCYGroceryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryListViewController.m; sourceTree = "<group>"; };
 		D0D60F33183A09E500C09998 /* GCYGroceryItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCYGroceryItemCell.h; sourceTree = "<group>"; };
 		D0D60F34183A09E500C09998 /* GCYGroceryItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryItemCell.m; sourceTree = "<group>"; };
+		D0E35A6E1867CC1C00B3E6B9 /* GCYGroceryStoreSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCYGroceryStoreSpec.m; sourceTree = "<group>"; };
 		D0EE248E1839AAB300F251AF /* HockeySDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HockeySDK.xcodeproj; path = "External/HockeySDK-iOS/Support/HockeySDK.xcodeproj"; sourceTree = "<group>"; };
 		D0EE249F1839AAD300F251AF /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CrashReporter.framework; path = "External/HockeySDK-iOS/Vendor/CrashReporter.framework"; sourceTree = "<group>"; };
 		D0EE24A11839AADB00F251AF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
@@ -970,6 +972,7 @@
 			isa = PBXGroup;
 			children = (
 				D0F4BE0618396F62004A318B /* GCYGroceryItemSpec.m */,
+				D0E35A6E1867CC1C00B3E6B9 /* GCYGroceryStoreSpec.m */,
 			);
 			name = Specs;
 			sourceTree = "<group>";
@@ -1527,6 +1530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0E35A6F1867CC1C00B3E6B9 /* GCYGroceryStoreSpec.m in Sources */,
 				D0F4BE0718396F62004A318B /* GCYGroceryItemSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
