@@ -20,6 +20,12 @@
 		D053AB831861133D0084CF19 /* groceryicon-58.png in Resources */ = {isa = PBXBuildFile; fileRef = D053AB811861133D0084CF19 /* groceryicon-58.png */; };
 		D053AB841861133D0084CF19 /* groceryicon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = D053AB821861133D0084CF19 /* groceryicon-80.png */; };
 		D08161E5185EDD2000925E34 /* RACSignal+GCYBackgroundTaskAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D08161E4185EDD2000925E34 /* RACSignal+GCYBackgroundTaskAdditions.m */; };
+		D09CC1C21932973C003FCB80 /* libArchimedes-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BEF718397A2B004A318B /* libArchimedes-iOS.a */; };
+		D09CC1C31932973C003FCB80 /* libMantle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BDB318396BBB004A318B /* libMantle-iOS.a */; };
+		D09CC1C41932973D003FCB80 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BD9B18396BB5004A318B /* libReactiveCocoa-iOS.a */; };
+		D09CC1C51932973D003FCB80 /* libReactiveCocoaLayout iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BE5B183978D8004A318B /* libReactiveCocoaLayout iOS.a */; };
+		D09CC1C61932973D003FCB80 /* libReactiveViewModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BE67183978D8004A318B /* libReactiveViewModel.a */; };
+		D09CC1C719329746003FCB80 /* libOctoKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BD7C18396BA8004A318B /* libOctoKit.a */; };
 		D0A4DC8218553A500033CFB4 /* GCYGroceryStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4DC8118553A500033CFB4 /* GCYGroceryStore.m */; };
 		D0A4DC86185540590033CFB4 /* NSString+GCYEnumerationAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4DC85185540590033CFB4 /* NSString+GCYEnumerationAdditions.m */; };
 		D0A4DC89185545CB0033CFB4 /* GCYGroceryList.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A4DC88185545CB0033CFB4 /* GCYGroceryList.m */; };
@@ -53,21 +59,57 @@
 		D0F0B56E171507240048B8DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0F0B56C171507240048B8DE /* InfoPlist.strings */; };
 		D0F4BDD818396C00004A318B /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BD8918396BAE004A318B /* libAFNetworking.a */; };
 		D0F4BDD918396C00004A318B /* libISO8601DateFormatter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BD8D18396BAE004A318B /* libISO8601DateFormatter.a */; };
-		D0F4BDDA18396C00004A318B /* libMantle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BDB318396BBB004A318B /* libMantle-iOS.a */; };
-		D0F4BDDB18396C00004A318B /* libOctoKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BD7C18396BA8004A318B /* libOctoKit.a */; };
-		D0F4BDDC18396C00004A318B /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BD9B18396BB5004A318B /* libReactiveCocoa-iOS.a */; };
 		D0F4BE0318396EEC004A318B /* libExpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BDEE18396ED1004A318B /* libExpecta-iOS.a */; };
 		D0F4BE0418396EEF004A318B /* libSpecta-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BDFA18396ED1004A318B /* libSpecta-iOS.a */; };
 		D0F4BE0718396F62004A318B /* GCYGroceryItemSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F4BE0618396F62004A318B /* GCYGroceryItemSpec.m */; };
 		D0F4BE0918396FF5004A318B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BE0818396FF5004A318B /* Security.framework */; };
 		D0F4BE0C18397264004A318B /* GCYUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F4BE0B18397264004A318B /* GCYUserController.m */; };
-		D0F4BE71183978E9004A318B /* libReactiveCocoaLayout iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BE5B183978D8004A318B /* libReactiveCocoaLayout iOS.a */; };
-		D0F4BE72183978E9004A318B /* libReactiveViewModel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BE67183978D8004A318B /* libReactiveViewModel.a */; };
-		D0F4BF1A18397A3E004A318B /* libArchimedes-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F4BEF718397A2B004A318B /* libArchimedes-iOS.a */; };
 		D0F4BF2318397CF4004A318B /* GCYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F4BF2218397CF4004A318B /* GCYViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D09CC1DD193297A8003FCB80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F4BEEB18397A2B004A318B /* Archimedes.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D02FAF8E1635DFD8008D42D9;
+			remoteInfo = "Archimedes iOS";
+		};
+		D09CC1DF193297B6003FCB80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F4BDA618396BBB004A318B /* Mantle.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D042FC7815F72BC7004E8054;
+			remoteInfo = "Mantle-iOS";
+		};
+		D09CC1E1193297B6003FCB80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F4BD6618396BA7004A318B /* OctoKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0871FE3169E309900016ACA;
+			remoteInfo = "OctoKit iOS";
+		};
+		D09CC1E3193297B6003FCB80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F4BD8E18396BB5004A318B /* ReactiveCocoa.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 88F440AA153DAC820097B4C3;
+			remoteInfo = "ReactiveCocoa-iOS";
+		};
+		D09CC1E5193297B6003FCB80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F4BE33183978D8004A318B /* ReactiveCocoaLayout.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D06269EC1679440C00E951A5;
+			remoteInfo = "ReactiveCocoaLayout iOS";
+		};
+		D09CC1E7193297B6003FCB80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0F4BE3A183978D8004A318B /* ReactiveViewModel.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D0948A8C178159F900BA8F23;
+			remoteInfo = "ReactiveViewModel iOS";
+		};
 		D0EE24961839AAB300F251AF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0EE248E1839AAB300F251AF /* HockeySDK.xcodeproj */;
@@ -243,20 +285,6 @@
 			remoteGlobalIDString = D0A56B461804B04900A84EDC;
 			remoteInfo = "Mantle-Mac";
 		};
-		D0F4BDCE18396BF0004A318B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0F4BDA618396BBB004A318B /* Mantle.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D042FC7815F72BC7004E8054;
-			remoteInfo = "Mantle-iOS";
-		};
-		D0F4BDD018396BF0004A318B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0F4BD6618396BA7004A318B /* OctoKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D0871FE3169E309900016ACA;
-			remoteInfo = "OctoKit iOS";
-		};
 		D0F4BDD218396BF0004A318B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0F4BD7F18396BAD004A318B /* OctoKitDependencies.xcodeproj */;
@@ -397,20 +425,6 @@
 			remoteGlobalIDString = D0948A9C178159F900BA8F23;
 			remoteInfo = "ReactiveViewModel iOS Tests";
 		};
-		D0F4BE6D183978E3004A318B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0F4BE33183978D8004A318B /* ReactiveCocoaLayout.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D06269EC1679440C00E951A5;
-			remoteInfo = "ReactiveCocoaLayout iOS";
-		};
-		D0F4BE6F183978E3004A318B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0F4BE3A183978D8004A318B /* ReactiveViewModel.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D0948A8C178159F900BA8F23;
-			remoteInfo = "ReactiveViewModel iOS";
-		};
 		D0F4BEF218397A2B004A318B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D0F4BEEB18397A2B004A318B /* Archimedes.xcodeproj */;
@@ -438,20 +452,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = D02FAF9D1635DFD9008D42D9;
 			remoteInfo = "Archimedes iOS Tests";
-		};
-		D0F4BF1618397A39004A318B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0F4BEEB18397A2B004A318B /* Archimedes.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D02FAF8E1635DFD8008D42D9;
-			remoteInfo = "Archimedes iOS";
-		};
-		D0F4BF1818397A39004A318B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0F4BD8E18396BB5004A318B /* ReactiveCocoa.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 88F440AA153DAC820097B4C3;
-			remoteInfo = "ReactiveCocoa-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -564,19 +564,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09CC1C719329746003FCB80 /* libOctoKit.a in Frameworks */,
+				D09CC1C21932973C003FCB80 /* libArchimedes-iOS.a in Frameworks */,
+				D09CC1C31932973C003FCB80 /* libMantle-iOS.a in Frameworks */,
+				D09CC1C41932973D003FCB80 /* libReactiveCocoa-iOS.a in Frameworks */,
+				D09CC1C51932973D003FCB80 /* libReactiveCocoaLayout iOS.a in Frameworks */,
+				D09CC1C61932973D003FCB80 /* libReactiveViewModel.a in Frameworks */,
 				D0EE24A41839AAE300F251AF /* QuartzCore.framework in Frameworks */,
 				D0EE24A21839AADB00F251AF /* CoreText.framework in Frameworks */,
 				D0EE249E1839AAC800F251AF /* libHockeySDK.a in Frameworks */,
-				D0F4BF1A18397A3E004A318B /* libArchimedes-iOS.a in Frameworks */,
-				D0F4BE71183978E9004A318B /* libReactiveCocoaLayout iOS.a in Frameworks */,
-				D0F4BE72183978E9004A318B /* libReactiveViewModel.a in Frameworks */,
 				D0F4BE0918396FF5004A318B /* Security.framework in Frameworks */,
 				D0F4BDD818396C00004A318B /* libAFNetworking.a in Frameworks */,
 				D0F4BDD918396C00004A318B /* libISO8601DateFormatter.a in Frameworks */,
 				D0EE24A01839AAD300F251AF /* CrashReporter.framework in Frameworks */,
-				D0F4BDDA18396C00004A318B /* libMantle-iOS.a in Frameworks */,
-				D0F4BDDB18396C00004A318B /* libOctoKit.a in Frameworks */,
-				D0F4BDDC18396C00004A318B /* libReactiveCocoa-iOS.a in Frameworks */,
 				D0F0B4F91749965B004DD8B0 /* MobileCoreServices.framework in Frameworks */,
 				D0F0B4F717499657004DD8B0 /* SystemConfiguration.framework in Frameworks */,
 				D0F0B540171507240048B8DE /* UIKit.framework in Frameworks */,
@@ -1059,15 +1059,15 @@
 			buildRules = (
 			);
 			dependencies = (
-				D0EE249D1839AAC100F251AF /* PBXTargetDependency */,
-				D0F4BF1718397A39004A318B /* PBXTargetDependency */,
-				D0F4BF1918397A39004A318B /* PBXTargetDependency */,
-				D0F4BE6E183978E3004A318B /* PBXTargetDependency */,
-				D0F4BE70183978E3004A318B /* PBXTargetDependency */,
-				D0F4BDCF18396BF0004A318B /* PBXTargetDependency */,
-				D0F4BDD118396BF0004A318B /* PBXTargetDependency */,
+				D09CC1E0193297B6003FCB80 /* PBXTargetDependency */,
+				D09CC1E4193297B6003FCB80 /* PBXTargetDependency */,
 				D0F4BDD318396BF0004A318B /* PBXTargetDependency */,
 				D0F4BDD518396BF0004A318B /* PBXTargetDependency */,
+				D09CC1E2193297B6003FCB80 /* PBXTargetDependency */,
+				D09CC1DE193297A8003FCB80 /* PBXTargetDependency */,
+				D09CC1E6193297B6003FCB80 /* PBXTargetDependency */,
+				D09CC1E8193297B6003FCB80 /* PBXTargetDependency */,
+				D0EE249D1839AAC100F251AF /* PBXTargetDependency */,
 			);
 			name = GroceryList;
 			productName = GroceryList;
@@ -1538,6 +1538,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D09CC1DE193297A8003FCB80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Archimedes iOS";
+			targetProxy = D09CC1DD193297A8003FCB80 /* PBXContainerItemProxy */;
+		};
+		D09CC1E0193297B6003FCB80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Mantle-iOS";
+			targetProxy = D09CC1DF193297B6003FCB80 /* PBXContainerItemProxy */;
+		};
+		D09CC1E2193297B6003FCB80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "OctoKit iOS";
+			targetProxy = D09CC1E1193297B6003FCB80 /* PBXContainerItemProxy */;
+		};
+		D09CC1E4193297B6003FCB80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveCocoa-iOS";
+			targetProxy = D09CC1E3193297B6003FCB80 /* PBXContainerItemProxy */;
+		};
+		D09CC1E6193297B6003FCB80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveCocoaLayout iOS";
+			targetProxy = D09CC1E5193297B6003FCB80 /* PBXContainerItemProxy */;
+		};
+		D09CC1E8193297B6003FCB80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveViewModel iOS";
+			targetProxy = D09CC1E7193297B6003FCB80 /* PBXContainerItemProxy */;
+		};
 		D0EE249D1839AAC100F251AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HockeySDK;
@@ -1547,16 +1577,6 @@
 			isa = PBXTargetDependency;
 			target = D0F0B53B171507240048B8DE /* GroceryList */;
 			targetProxy = D0F0B567171507240048B8DE /* PBXContainerItemProxy */;
-		};
-		D0F4BDCF18396BF0004A318B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Mantle-iOS";
-			targetProxy = D0F4BDCE18396BF0004A318B /* PBXContainerItemProxy */;
-		};
-		D0F4BDD118396BF0004A318B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "OctoKit iOS";
-			targetProxy = D0F4BDD018396BF0004A318B /* PBXContainerItemProxy */;
 		};
 		D0F4BDD318396BF0004A318B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1577,26 +1597,6 @@
 			isa = PBXTargetDependency;
 			name = "Specta-iOS";
 			targetProxy = D0F4BE0118396EDD004A318B /* PBXContainerItemProxy */;
-		};
-		D0F4BE6E183978E3004A318B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveCocoaLayout iOS";
-			targetProxy = D0F4BE6D183978E3004A318B /* PBXContainerItemProxy */;
-		};
-		D0F4BE70183978E3004A318B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveViewModel iOS";
-			targetProxy = D0F4BE6F183978E3004A318B /* PBXContainerItemProxy */;
-		};
-		D0F4BF1718397A39004A318B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Archimedes iOS";
-			targetProxy = D0F4BF1618397A39004A318B /* PBXContainerItemProxy */;
-		};
-		D0F4BF1918397A39004A318B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "ReactiveCocoa-iOS";
-			targetProxy = D0F4BF1818397A39004A318B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1626,11 +1626,12 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "GroceryList/GroceryList-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 			};
 			name = Debug;
 		};
@@ -1640,11 +1641,12 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "GroceryList/GroceryList-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 			};
 			name = Release;
 		};
@@ -1742,11 +1744,12 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREFIX_HEADER = "GroceryList/GroceryList-Prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 			};
 			name = Profile;
 		};
