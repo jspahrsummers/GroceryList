@@ -95,7 +95,6 @@
 		ignore:nil]
 		map:^(NSArray *items) {
 			return [items.rac_signal flattenMap:^(GCYGroceryItemViewModel *viewModel) {
-				@strongify(self);
 				return [[RACObserve(viewModel, inCart)
 					skip:1]
 					mapReplace:viewModel];
@@ -151,15 +150,13 @@
 		}]
 		action];
 	
-	RACAction *editItemAction = [[RACSamplingSignalGenerator
-		generatorBySampling:[RACObserve(self, list) ignore:nil]
-		forGenerator:[RACDynamicSignalGenerator generatorWithBlock:^(RACTuple *xs) {
-			GCYGroceryItem *item = xs[0];
-			GCYGroceryList *list = xs[1];
+	RACAction *editItemAction = [[RACDynamicSignalGenerator
+		generatorWithBlock:^(GCYGroceryItem *item) {
+			@strongify(self);
 
-			id viewModel = [[GCYEditableGroceryItemViewModel alloc] initWithList:list item:item];
+			id viewModel = [[GCYEditableGroceryItemViewModel alloc] initWithList:self.list item:item];
 			return [RACSignal return:viewModel];
-		}]]
+		}]
 		action];
 	
 	RAC(self, editingItem) = editItemAction.results;
@@ -186,7 +183,6 @@
 		map:^(NSArray *items) {
 			NSArray *inCartSignals = [[[items.rac_signal
 				map:^(GCYGroceryItemViewModel *viewModel) {
-					@strongify(self);
 					return RACObserve(viewModel, inCart);
 				}]
 				startWith:[RACSignal return:@NO]]
@@ -237,10 +233,11 @@
 				catchTo:[RACSignal empty]];
 		}]
 		flattenMap:^(GCYGroceryListViewModel *viewModel) {
-			return [[[viewModel.loadItemsAction
+			return [[[[viewModel.loadItemsAction
 				signalWithValue:nil]
-				concat:[RACSignal return:RACUnit.defaultUnit]]
-				catchTo:[RACSignal empty]];
+				ignoreValues]
+				catchTo:[RACSignal empty]]
+				materialize];
 		}]
 		take:1]
 		subscribe:nil];

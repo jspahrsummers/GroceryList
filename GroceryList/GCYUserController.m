@@ -68,13 +68,20 @@
 #pragma mark Saved credentials
 
 - (RACSignal *)authenticatedClientWithSavedCredentials {
-	return [RACSignal defer:^{
-		NSURLCredential *credential = [NSURLCredentialStorage.sharedCredentialStorage defaultCredentialForProtectionSpace:self.protectionSpace];
-		if (credential == nil || !credential.hasPassword) return [RACSignal empty];
+	return [[RACSignal
+		defer:^{
+			NSURLCredential *credential = [NSURLCredentialStorage.sharedCredentialStorage defaultCredentialForProtectionSpace:self.protectionSpace];
+			if (credential == nil || !credential.hasPassword) return [RACSignal empty];
 
-		OCTUser *user = [OCTUser userWithLogin:credential.user server:OCTServer.dotComServer];
-		return [RACSignal return:[OCTClient authenticatedClientWithUser:user token:credential.password]];
-	}];
+			OCTUser *user = [OCTUser userWithRawLogin:credential.user server:OCTServer.dotComServer];
+			return [RACSignal return:[OCTClient authenticatedClientWithUser:user token:credential.password]];
+		}]
+		flattenMap:^(OCTClient *client) {
+			return [[[client
+				fetchUserInfo]
+				ignoreValues]
+				concat:[RACSignal return:client]];
+		}];
 }
 
 - (RACSignal *)saveToken:(NSString *)token forUser:(OCTUser *)user {
