@@ -72,7 +72,7 @@
 		NSURLCredential *credential = [NSURLCredentialStorage.sharedCredentialStorage defaultCredentialForProtectionSpace:self.protectionSpace];
 		if (credential == nil || !credential.hasPassword) return [RACSignal empty];
 
-		OCTUser *user = [OCTUser userWithLogin:credential.user server:OCTServer.dotComServer];
+		OCTUser *user = [OCTUser userWithRawLogin:credential.user server:OCTServer.dotComServer];
 		return [RACSignal return:[OCTClient authenticatedClientWithUser:user token:credential.password]];
 	}];
 }
