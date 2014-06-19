@@ -60,7 +60,10 @@
 			NSArray *pieces = [repositoryNWO componentsSeparatedByString:@"/"];
 			NSAssert(pieces.count == 2, @"Repository name should be of the form \"owner/name\", instead got: %@", repositoryNWO);
 
-			return [client fetchRepositoryWithName:pieces[1] owner:pieces[0]];
+			return [[client fetchRepositoryWithName:pieces[1] owner:pieces[0]] catch:^(NSError *error) {
+				[self->_errors sendNext:error];
+				return [RACSignal empty];
+			}];
 		}]
 		switchToLatest];
 	
