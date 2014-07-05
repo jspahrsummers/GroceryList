@@ -1,4 +1,4 @@
-**Project and source code copyright (c) 2013 Justin Spahr-Summers.**
+**Project and source code copyright (c) 2013–2014 Justin Spahr-Summers.**
 
 **Icon copyright (c) 2013 Brenda McIntosh.**
 
