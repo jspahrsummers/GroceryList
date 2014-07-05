@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0600"
    version = "1.3">
    <BuildAction
-      parallelizeBuildables = "NO"
-      buildImplicitDependencies = "NO">
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0F0B53B171507240048B8DE"
+               BlueprintIdentifier = "D0B2822C1967C21F00537ABB"
                BuildableName = "GroceryList.app"
                BlueprintName = "GroceryList"
-               ReferencedContainer = "container:GroceryList.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0F0B561171507240048B8DE"
-               BuildableName = "GroceryListTests.octest"
-               BlueprintName = "GroceryListTests"
                ReferencedContainer = "container:GroceryList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +32,8 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D0F0B561171507240048B8DE"
-               BuildableName = "GroceryListTests.octest"
+               BlueprintIdentifier = "D0B282391967C21F00537ABB"
+               BuildableName = "GroceryListTests.xctest"
                BlueprintName = "GroceryListTests"
                ReferencedContainer = "container:GroceryList.xcodeproj">
             </BuildableReference>
@@ -56,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D0F0B53B171507240048B8DE"
+            BlueprintIdentifier = "D0B2822C1967C21F00537ABB"
             BuildableName = "GroceryList.app"
             BlueprintName = "GroceryList"
             ReferencedContainer = "container:GroceryList.xcodeproj">
@@ -75,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D0F0B53B171507240048B8DE"
+            BlueprintIdentifier = "D0B2822C1967C21F00537ABB"
             BuildableName = "GroceryList.app"
             BlueprintName = "GroceryList"
             ReferencedContainer = "container:GroceryList.xcodeproj">
@@ -93,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D0F0B53B171507240048B8DE"
+            BlueprintIdentifier = "D0B2822C1967C21F00537ABB"
             BuildableName = "GroceryList.app"
             BlueprintName = "GroceryList"
             ReferencedContainer = "container:GroceryList.xcodeproj">
