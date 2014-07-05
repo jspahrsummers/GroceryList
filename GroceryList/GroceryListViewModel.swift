@@ -22,6 +22,14 @@ struct GroceryListViewModel {
 				return $0.item.name.localizedCaseInsensitiveCompare($1.item.name) == NSComparisonResult.OrderedAscending
 			}
 		}
+
+		@conversion func __conversion() -> GroceryItemViewModel[] {
+			return items
+		}
+
+		subscript(index: Int) -> GroceryItemViewModel {
+			return items[index]
+		}
 	}
 
 	let loadItems: Action<(), SortedList>

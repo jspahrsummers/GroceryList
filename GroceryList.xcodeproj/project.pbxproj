@@ -20,6 +20,8 @@
 		D0B282B31967DC6E00537ABB /* GroceryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B282B21967DC6E00537ABB /* GroceryListViewModel.swift */; };
 		D0B282B51967DCAC00537ABB /* GroceryItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B282B41967DCAC00537ABB /* GroceryItemViewModel.swift */; };
 		D0B282B71967DD8600537ABB /* GroceryStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B282B61967DD8600537ABB /* GroceryStoreViewModel.swift */; };
+		D0B282BB1967E7AB00537ABB /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B282BA1967E7AB00537ABB /* GroceryListViewController.swift */; };
+		D0B282C11967EB7300537ABB /* GroceryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B282C01967EB7300537ABB /* GroceryItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		D0B282B21967DC6E00537ABB /* GroceryListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewModel.swift; sourceTree = "<group>"; };
 		D0B282B41967DCAC00537ABB /* GroceryItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemViewModel.swift; sourceTree = "<group>"; };
 		D0B282B61967DD8600537ABB /* GroceryStoreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryStoreViewModel.swift; sourceTree = "<group>"; };
+		D0B282BA1967E7AB00537ABB /* GroceryListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
+		D0B282C01967EB7300537ABB /* GroceryItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroceryItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +291,8 @@
 			isa = PBXGroup;
 			children = (
 				D0B282321967C21F00537ABB /* AppDelegate.swift */,
+				D0B282C01967EB7300537ABB /* GroceryItemCell.swift */,
+				D0B282BA1967E7AB00537ABB /* GroceryListViewController.swift */,
 				D0B282A11967D62300537ABB /* TableViewController.swift */,
 				D0B282621967C4AD00537ABB /* ViewController.swift */,
 			);
@@ -446,7 +452,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B282BB1967E7AB00537ABB /* GroceryListViewController.swift in Sources */,
 				D0B282B31967DC6E00537ABB /* GroceryListViewModel.swift in Sources */,
+				D0B282C11967EB7300537ABB /* GroceryItemCell.swift in Sources */,
 				D0B282631967C4AD00537ABB /* ViewController.swift in Sources */,
 				D0B282B51967DCAC00537ABB /* GroceryItemViewModel.swift in Sources */,
 				D0B282AA1967D96100537ABB /* GroceryList.swift in Sources */,
