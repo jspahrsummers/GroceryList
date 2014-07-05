@@ -43,4 +43,11 @@ struct GroceryListViewModel {
 	}
 
 	let selectedStore = SignalingProperty(GroceryStoreViewModel.allStoresViewModel())
+
+	init() {
+		let promise = Promise<Result<SortedList>> { sink in }
+
+		loadItems = Action { _ in promise }
+		removeItem = Action { _ in promise }
+	}
 }

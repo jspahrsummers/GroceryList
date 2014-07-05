@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		self.window.backgroundColor = UIColor.whiteColor()
 
-		let navController = UINavigationController(rootViewController: UIViewController())
+		let listViewController = GroceryListViewController(viewModel: GroceryListViewModel())
+		let navController = UINavigationController(rootViewController: listViewController)
 		navController.navigationBar.translucent = false
 
 		self.window.rootViewController = navController
